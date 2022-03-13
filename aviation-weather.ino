@@ -22,8 +22,8 @@ const String ICAO_CODE = "KPAO";
 // Web query used to retrieve weather data for specific airport
 const String WEB_URL = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=" + WEATHER_TYPE + "s&requestType=retrieve&format=xml&stationString=" + ICAO_CODE + "&hoursBeforeNow=6";
 
-// SHA1 fingerprint for aviationweather.gov, expires in October 2021, needs to be updated before this date. Invalid or expired fingerprint will cause HTTPS error.
-const uint8_t fingerprint[20] = {0x40, 0x34, 0x2C, 0x79, 0x4B, 0x19, 0x15, 0x22, 0x60, 0x67, 0x4D, 0x4F, 0x5B, 0xDE, 0x60, 0x5E, 0xB5, 0x6D, 0x09, 0x55};
+// SHA1 fingerprint for aviationweather.gov, expires in August 2022, needs to be updated before this date. Invalid or expired fingerprint will cause HTTPS error.
+const uint8_t fingerprint[20] = {0xDA, 0x78, 0xF0, 0x6D, 0xFF, 0xB7, 0x3B, 0x2F, 0xFE, 0x96, 0x70, 0x6A, 0x49, 0x76, 0x85, 0xA1, 0xF9, 0x38, 0xB8, 0x0C};
 
 // How often weather data should be refreshed (seconds). Use at least 60 seconds to avoid sending too many queries. METARs are issued every hour, TAF every 6 hours.
 const int REFRESH_WEATHER_DELAY = 300;
